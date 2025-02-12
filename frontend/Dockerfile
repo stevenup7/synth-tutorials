@@ -1,5 +1,5 @@
 # frontend/Dockerfile
-FROM node:18
+FROM node:18-alpine as build
 
 WORKDIR /app
 
@@ -8,4 +8,8 @@ RUN npm install
 
 COPY . /app
 
+RUN npm run build
+
+
 CMD ["npm", "run", "dev", "--", "--host"]
+# CMD ["nginx", "-g", "daemon off;"]
