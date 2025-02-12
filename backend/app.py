@@ -3,7 +3,6 @@ from flask import Flask
 
 from flask_cors import CORS
 from flask_restful import Api
-
 from routes.tutorials import Tutorials
 
 app = Flask(__name__)

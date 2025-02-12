@@ -1,12 +1,17 @@
-import { Typography, Paper } from "@mui/material";
+import React from "react";
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
 
 const Header: React.FC = () => {
   return (
-    <Paper elevation={3} className="card">
-      <Typography variant="h1" component="h1">
-        Synth Tutorials
-      </Typography>
-    </Paper>
+    <AppBar position="sticky" color="primary">
+      <Toolbar>
+        <Typography variant="h6" component="div">
+          Synth Tutorials - step by step howto for your synth
+        </Typography>
+      </Toolbar>
+    </AppBar>
   );
 };
 
